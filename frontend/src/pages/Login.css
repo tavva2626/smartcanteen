@@ -1,0 +1,223 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.login-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.orb-a {
+  width: 500px; height: 500px;
+  background: var(--purple);
+  top: -150px; right: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.orb-b {
+  width: 400px; height: 400px;
+  background: var(--cyan);
+  bottom: -100px; left: -100px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.login-container {
+  width: 420px;
+  max-width: 100%;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  position: relative;
+  z-index: 1;
+  animation: slideInUp 0.6s ease;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-logo-icon {
+  font-size: 2.5rem;
+  color: var(--purple-light);
+  margin-bottom: 8px;
+}
+
+.login-logo h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-logo p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Role Selection */
+.role-selection {
+  margin-bottom: 24px;
+}
+
+.role-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-card {
+  padding: 16px 12px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.role-card:hover {
+  border-color: var(--purple);
+  background: var(--bg-glass-strong);
+}
+
+.role-card.active {
+  border-color: var(--purple);
+  background: rgba(124, 58, 237, 0.15);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.role-icon {
+  font-size: 1.5rem;
+  color: var(--purple-light);
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px 14px 42px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.login-input::placeholder {
+  color: var(--text-muted);
+}
+
+.login-error {
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--red-light);
+  font-size: 0.8rem;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-toggle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.login-toggle button {
+  background: none;
+  border: none;
+  color: var(--purple-light);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.login-toggle button:hover {
+  text-decoration: underline;
+}
